@@ -1,0 +1,463 @@
+@media only screen and (max-width: 1699.98px) {
+
+    .form-logo {
+        margin-bottom: 40px;
+    }
+
+    .left-image {
+        min-height: 600px;
+    }
+
+    .signup-page .left-image {
+        min-height: 741px;
+    }
+
+}
+
+@media only screen and (max-width: 1599.98px) {
+
+    .form-logo {
+        margin-bottom: 50px;
+    }
+
+    .login-heading {
+        margin-bottom: 25px;
+    }
+
+    .left-image {
+        min-height: 570px;
+    }
+
+
+}
+
+@media only screen and (max-width: 1299.98px) {
+
+    .paymeny-table,
+    .search-track-table,
+    .dashboard-table {
+        overflow-x: auto;
+    }
+
+    .paymeny-table table,
+    .dashboard-table table {
+        width: 100%;
+        min-width: 1000px;
+    }
+
+
+
+    .form-logo {
+        margin-bottom: 25px;
+    }
+
+    .mobile-margin {
+        margin-top: 20px !important;
+    }
+
+    .left-image {
+        min-height: 540px;
+    }
+
+    .acordian-table table {
+        min-width: 40%;
+    }
+
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .width1070 {
+        min-width: 100%;
+    }
+
+    .search-bar {
+        width: 340px;
+        flex: 0 0 auto;
+    }
+
+    .search-track-table table {
+        width: 100%;
+        min-width: 780px;
+    }
+
+    .normal-content h4 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .cover-tracking p {
+        font-size: 16px;
+    }
+
+    .dashboard-table table td,
+    .dashboard-table table th {
+        font-size: 16px;
+    }
+
+    .dashboard-table table tr th {
+        font-size: 18px;
+        padding: 10px 10px;
+    }
+
+    .rate-content h2 {
+        font-size: 26px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+
+    .total-payment {
+        font-size: 18px;
+    }
+
+
+}
+@media only screen and (max-width: 1024px) {
+.form-section .form-control, .form-section .form-select {
+    line-height: 21px;
+    height: 44px;
+    box-shadow: non
+}
+.signup-page .left-image {
+    min-height: 573px;
+}
+}
+
+@media only screen and (max-width: 991.98px) {
+
+
+    .borderd-area {
+        flex-flow: wrap;
+        flex: 0 0 auto;
+    }
+
+    .left-image {
+        background-size: cover;
+        width: 100%;
+        min-height: 400px;
+        height: 100%;
+        background-position: bottom;
+    }
+
+    .login-form {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .form-logo {
+        margin-bottom: 10px;
+    }
+
+    .login-heading {
+        margin-bottom: 20px;
+    }
+
+    .login-heading {
+        margin-bottom: 20px;
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .mobile-margin {
+        margin: 10px 0 !important;
+    }
+
+    .bg-all-page {
+        background-size: cover;
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-attachment: fixed;
+        background-position: center;
+        padding: 100px 0;
+        min-height: 100vh;
+
+    }
+
+    .common-area {
+        display: block;
+        flex: 0 0 auto;
+        height: auto;
+    }
+
+    .right-head {
+        flex-flow: wrap;
+    }
+
+    .sidebar {
+        width: 0;
+    }
+
+    #main {
+        margin-left: 0 !important;
+    }
+
+    .rate-content h2 {
+        font-size: 24px;
+        line-height: 25px;
+        margin-bottom: 15px;
+    }
+
+    .normal-content h4 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .rate-content .form-control,
+    .rate-content .form-select {
+        height: 50px;
+    }
+
+    .top-gap-res {
+        margin-top: 10px;
+    }
+
+    .signup-page .left-image {
+        min-height: 400px;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 767.98px) {
+
+    .width728 {
+        width: 100%;
+    }
+
+    .search-bar {
+        width: 225px;
+        flex: 0 0 auto;
+    }
+
+    .status-part {
+        flex-flow: wrap;
+    }
+
+    .status-area {
+        margin-bottom: 15px;
+    }
+
+    .cover-tracking p {
+        font-size: 15px;
+    }
+
+    .dashboard-table tr td {
+        font-size: 16px;
+    }
+
+    .dashboard-table table tr th {
+        font-size: 18px;
+        padding: 10px 10px;
+    }
+
+    .total-payment {
+        font-size: 16px;
+    }
+
+    .button-price {
+        width: auto;
+    }
+
+    .acordian-table table {
+        min-width: 65%;
+    }
+
+}
+
+@media only screen and (max-width: 575.98px) {
+
+    .dash-header {
+        background: #1e85f10f;
+        height: auto;
+        padding: 5px 10px;
+        flex-flow: column;
+        align-items: flex-start !important;
+    }
+
+    .search-bar {
+        width: 100%;
+        flex: 0 0 auto;
+        order: 3;
+    }
+
+    .right-head {
+        flex-flow: wrap;
+        width: 100%;
+    }
+
+    .notification-area {
+        margin-left: auto;
+        margin-bottom: 10px;
+    }
+
+    .profile-head {
+        margin-bottom: 10px;
+    }
+
+    .openbtn {
+        margin-bottom: -42px;
+        position: relative;
+        z-index: 9;
+    }
+
+    .sidebar {
+        z-index: 999;
+    }
+
+    .rate-content h2 {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .normal-content h4 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .status-area {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .notification-area .dropdown-menu {
+        transform: translate(-50%, 53px) !important;
+        min-width: 350px;
+        left: 50% !important;
+        right: inherit !important;
+        margin: 0 auto !important;
+    }
+
+    .notification-area ul::before {
+        right: 165px;
+    }
+
+    .shipping-details {
+        flex-flow: wrap;
+    }
+
+    .shipping-details span {
+        width: 100%;
+    }
+
+    .shipping-details span {
+        width: 100%;
+        text-align: left;
+        display: flex;
+        flex-flow: wrap;
+        margin-bottom: 15px;
+    }
+
+    .position {
+        width: 80%;
+        padding-left: 10px;
+    }
+
+    .shipping-position {
+        width: 100%;
+        padding-left: 35px;
+    }
+
+    .shipping-details::after {
+        content: '';
+        position: absolute;
+        left: 12px;
+        right: inherit;
+        height: 90%;
+        background: #E0E5EB;
+        border-radius: 20px;
+        top: 13px;
+        width: 2px;
+        margin: 0 auto;
+    }
+
+    .blue-logo-area {
+        margin-bottom: 30px;
+    }
+
+    .cover-area {
+        flex-flow: column;
+    }
+
+    .acordian-table table {
+        min-width: 100%;
+    }
+
+    /*** 03.03.2023 *****/ 
+
+    .remove-package {
+        margin: 0 !important;
+        margin-bottom: 30px !important;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    .otp-number input[type=number] {
+        text-align: center;
+        width: 100%;
+    }
+
+    .notification-area .dropdown-menu {
+        min-width: 300px;
+    }
+
+    .notification-area ul::before {
+        right: 138px;
+    }
+
+    .otp-number .m-2 {
+        margin: 2px !important;
+    }
+
+}
+
+@media only screen and (max-width: 410px) {
+    .notification-area .dropdown-menu {
+        transform: translate(-40%, 53px) !important;
+    }
+
+    .notification-area ul::before {
+        right: 170px;
+    }
+
+
+}
+
+@media only screen and (max-width: 380px) {
+    .notification-area .dropdown-menu {
+        transform: translate(-20%, 53px) !important;
+    }
+
+    .notification-area ul::before {
+        right: 223px;
+    }
+
+    .notification-area .message-posi {
+        transform: translate(-35%, 53px) !important;
+
+    }
+
+    .notification-area .message-posi::before {
+        right: 188px;
+    }
+
+    .cross-icon {
+        right: 10px;
+        top: 10px;
+    }
+
+    .heading-f-pw {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .all-button {
+        font-size: 16px;
+    }
+
+
+}

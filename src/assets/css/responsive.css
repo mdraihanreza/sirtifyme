@@ -1,0 +1,476 @@
+@media only screen and (max-width: 1200px){
+  .profile {padding: 37px 0 55px 0;}
+
+   /*  Faq Page start  */
+
+   .faq .accordion-button::after {
+    position: relative;
+    top: 5px;
+    left: 10px;
+}
+
+.faq .accordion-button:not(.collapsed)::after {
+  position: absolute;
+  right: -10px;
+  top: -3px;
+}
+
+.faq .accordion-item{
+  padding: 20px 25px;
+}
+
+.faq h2.accordion-header button{
+  font-size: 16px;
+}
+
+ /*  Faq Page end  */
+
+ /* My connection css start */
+
+.my-connection-inner{
+  padding: 30px 25px 10px;
+}
+
+.my-connection-inner .testimonial-grid {
+    padding: 20px 15px;
+}
+
+.my-connection-inner .testimonial-info h5 {
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+a.view-details{
+  padding: 7px 12px;
+}
+
+/* My connection css end */
+
+}
+
+@media only screen and (max-width: 992px) {
+    /********NAV BAR*****************/
+  .nav {
+    float: right;
+    width: 100%;
+    }
+    .logo {
+    margin-bottom: 0px;
+    }
+    .header .row{
+    margin: 0px;
+    }
+    #pull {
+    display: block;
+    width: auto;
+    float: right;
+    margin-top: 10px;
+    }
+    .cover-nav{flex-wrap: wrap;}
+    ul#menu-bg {
+    display: none;
+    }
+    ul#menu-bg{width: 100%;padding: 30px 0;}
+    .nav > ul > li > a{padding: 10px 0;}
+    .book-now{margin-top: 15px;padding: 10px 30px !important;display: inline-block !important;}
+    .header-phone {
+    margin-left: 40px;
+    margin-top: 14px;
+    }
+    .top-icon {
+    margin-top: 31px;
+    }
+    .nav > ul > li{
+    display: block;
+    max-width: 100px;
+    margin: 0;
+    }
+
+    .nav>ul>li:hover>ul.submenu{
+      left: 0;
+    }
+
+    .nav-area {
+      padding: 8px 15px;
+  }
+    .servicess___content {
+      transform: translateY(26%);
+      padding: 0 16px;
+  }
+  .servicess___content h5 {
+    font-size: 28px;
+    
+}
+a.comn__btn {
+  padding: 13px 34px;
+  font-size: 15px;
+}
+.banner {
+  padding: 45px 0;
+}
+ul#menu-bg li:first-child{
+  margin-bottom: 10px;
+}
+/*******Home search box start *******/
+.home-search .search{
+  width: 90%;
+}
+/*******Home search box end *******/
+/*******About us start *******/
+.about-us .about-us-left img{
+  display: table;
+  margin: auto;
+}
+.about-us .about-us-left{
+  margin-bottom: 20px;
+}
+/*******About us end *******/
+footer{
+  padding-top: 0;
+}
+
+.profile {
+    padding: 55px 0;
+}
+
+.profile ul#pills-tab{padding: 0px 15px 0px 15px;}
+.profile ul#pills-tab .nav-item {
+    padding: 0 20px;
+}
+
+/* Contact page css start  */
+ 
+.contact .form-control{padding: 10px 20px;}
+.contact .col-gap {margin-bottom: 15px;}
+.contact textarea{height: 120px;}
+
+/* Contact page css end */
+
+/* My connection css start */
+
+.my-connection,.notification {
+  padding: 50px 0;
+}
+
+.my-connection-inner .testimonial-info h5 {
+font-size: 18px;
+margin-bottom: 2px;
+}
+
+/* My connection css end */
+
+/* Notification css start */
+
+.notification-table{
+max-width: 100%;
+}
+
+button.round-btn{
+  margin-right: 8px;
+}
+    
+
+/* Notification css end */
+
+}
+@media only screen and (max-width:767px){
+  .services__item {
+    width: 100%;
+    }
+    .servicess___content h5 {
+      font-size: 24px;
+  }
+  .servicess___content {
+    transform: translateY(14%);
+}
+.about-us .about-right-btn-wrap{
+  justify-content: center;
+}
+
+.profile .tab-content{
+  padding: 30px 25px 40px;
+}
+
+.profile .add-more{
+  margin-right: 0;
+}
+
+.profile input[type="submit"], .profile .add-more{
+  font-size: 16px;
+  width: 137px;
+}
+
+.profile .tab-content h2{
+  font-size: 22px;
+}
+
+.profile .form-control, .profile .form-select{
+  padding: 9px 12px;
+}
+
+.custom-file-button:before{
+  top: 10px;
+}
+
+.profile .form-control[type=file]{
+  height: 41px;
+}
+
+.input-date:before{
+  top: 9px;
+}
+
+.inner-page .inner-content h1{
+  text-align: center;
+}
+
+button.round-btn {
+  margin-bottom: 15px !important;
+}
+
+button.round-btn:last-child {
+  margin-bottom: 0 !important;
+}
+
+.provider-content a.connect-btn{
+  margin: 15px auto 0;
+}
+
+.provider-content a.connect-btn{
+  height: 40px;
+}
+
+.provider-box:hover .provider-box-head span {
+  color: #fff;
+}
+
+.provider-content p,.provider-content h6{
+  text-align: center;
+}
+
+.counter{
+  padding-bottom: 40px;
+}
+
+.counter-no{
+  margin-bottom: 15px;
+}
+
+footer .footer-content .f-menu-list li>a{
+  font-size: 16px;
+  line-height: 24px;
+}
+
+}
+    /********About us start*****************/
+
+    @media only screen and (max-width:568px){
+
+      .inner-page{ height: 180px;}
+
+      header{padding: 6px 0;}
+
+      .nav{
+        width: 100%;
+      }
+      .profile {
+        padding: 30px 0;
+    }
+      .about-us .about-brdr{
+        padding: 27px 15px 27px 15px;
+      }
+      .drem-job{
+        padding: 40px 0 10px 0;
+      }
+      .about-us .about-us-left img{
+        min-height: 250px;
+      }
+      .sponcer-companies{
+        padding-bottom: 25px;
+      }
+      .home-search{
+        padding-top: 50px;
+        padding-bottom: 56px;
+      }
+      .home-search h1{
+        font-size: 26px;
+      }
+      .sponcer-companies h2{
+        font-size: 24px;
+      }
+      .drem-job h2{
+        font-size: 24px;
+      }
+      .registration-form-main {
+        padding-left: 0;
+    }
+
+    .registration-form-inner{
+      padding: 30px 15px 30px;
+    }
+      .registration-form-img {
+        margin-bottom: 20px;
+    }
+
+    .options {
+      padding-left: 25px;
+  }
+
+    button.round-btn{
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+
+    button.round-btn:last-child {
+      margin-right: 0;
+  }
+
+  footer {
+    padding-top: 30px;
+}
+
+
+   /*  Testimonial CSS start  */
+
+   .inner-page .inner-content h1{
+    font-size: 32px;
+  }
+
+  .client-testimonial h2, .faq-inner h2, .contact h2{
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .client-testimonial-inner, .contact-inner{
+    padding: 30px 15px 25px;
+  }
+
+  .testimonial-grid p{
+    margin: 15px 0 0;
+  }
+
+  .inner-page .inner-content .breadcrumb{
+    justify-content: center;
+  }
+
+  .client-testimonial-details{
+    padding: 30px 20px;
+  }
+
+  .client-testimonial-details p{
+    margin: 15px 0 12px;
+  }
+
+  /*  Testimonial CSS end  */
+
+/* FAQ CSS Start */
+
+.faq .accordion-item {
+  padding: 20px;
+}
+
+.faq h2.accordion-header button {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.faq-inner{
+padding: 30px 15px;
+}
+
+.faq .accordion-button:not(.collapsed)::after{
+right: 0;
+}
+
+.faq .accordion-button::after{
+left: 0;
+}
+
+/* FAQ CSS End */
+
+/* Contact page css start  */
+
+.contact .btn-submit{padding: 7px 15px;}
+
+/* Contact page css end  */
+
+/* Notification css start */
+
+.notification-table table .btn-accept, .notification-table table .btn-reject{
+  padding: 5px 25px;
+}
+
+.notification-table table .btn-reject {
+    margin-left: 15px;
+    margin-top: 0;
+}
+td.notification-buttons {
+    min-width: 250px;
+   vertical-align: middle;
+}
+
+/* Notification css end */
+
+/* Add Card css start */
+
+.card-section {
+    padding: 40px 0;
+}
+
+.card-inner{
+  padding: 30px 20px;
+}
+
+.card-details {
+    padding-left: 0;
+    padding-top: 20px;
+}
+
+/* Add Card css end */
+
+
+.notification-table{
+  padding: 22px 15px 5px;
+}
+
+td.notification-left-row .flex-column{
+  padding-right: 20px;
+}
+
+.contact .form-control {
+  padding: 7px 20px;
+}
+
+.contact textarea {
+  height: 100px;
+}
+
+.contact .btn-submit{
+  display: block;
+  margin: 10px auto 5px;
+}
+
+.provider-content a.connect-btn{
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.faq .accordion-button::after{
+  top: -6px;
+}
+.optional-register{
+  justify-content: flex-start;
+}
+button.round-btn.btn.btn-primary{
+  display: flex;
+}
+button.round-btn:last-child{
+  margin-bottom: 30px !important;
+}
+
+.profile .add-more,.profile .submit_button{width: 100%; max-width: 210px;}
+.profile .submit_button{padding: 11px;}
+.checkbox-grid input[type=text]{
+  width: 100%;
+}
+}

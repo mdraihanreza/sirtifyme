@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_365" data-name="Rectangle 365" width="40" height="40" transform="translate(374 19)" fill="#2a3349" stroke="#2a3349" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(-374 -19)" clip-path="url(#clip-path)">
+    <g id="menu-svgrepo-com" transform="translate(374 26.031)">
+      <g id="Menu">
+        <path id="Path_9201" data-name="Path 9201" d="M1.217,9.844H37.741a1.323,1.323,0,0,0,1.217-1.406,1.323,1.323,0,0,0-1.217-1.406H1.217A1.323,1.323,0,0,0,0,8.438,1.323,1.323,0,0,0,1.217,9.844Z" transform="translate(0 -7.031)" fill="#2a3349" opacity="0.82"/>
+        <path id="Path_9202" data-name="Path 9202" d="M30.25,21.094H.976c-.539,0-.976.63-.976,1.406s.437,1.406.976,1.406H30.25c.539,0,.976-.63.976-1.406S30.789,21.094,30.25,21.094Z" transform="translate(0 -8.28)" fill="#2a3349" opacity="0.82"/>
+        <path id="Path_9203" data-name="Path 9203" d="M37.741,35.156H1.217a1.421,1.421,0,0,0,0,2.812H37.741a1.421,1.421,0,0,0,0-2.812Z" transform="translate(0 -9.529)" fill="#2a3349" opacity="0.82"/>
+      </g>
+    </g>
+  </g>
+</svg>
