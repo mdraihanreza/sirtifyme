@@ -88,7 +88,7 @@ function Login() {
                         </div>
                         <div className="col-lg-5">
                             <div className="registration-form-main">
-                                {!location.state.provider_status ? <h3>Login As Non-Provider </h3> : <h3>Login As Provider</h3>}
+                                {!location.state.provider_status ? <h3>Login As Non-Providers </h3> : <h3>Login As Provider</h3>}
                                 <form onSubmit={handleSubmit(dataSubmit)}>
                                     <div className="form-group">
                                         <label>User Type</label>
