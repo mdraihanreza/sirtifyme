@@ -28,13 +28,10 @@ function TransactionDetails() {
     const [TransactionData, setTransactionData] = useState([]);
 
     var getTransactionData = async () => {
-       console.log(user,'user')
-        var user_id=user.id
-        console.log(user_id,'p_id')
-        //  alert(id)
-        if (user_id !== '') {
+        var token = TokenHelper.getToken();
+        if (token !== null) {
             console.log("repeat");
-            var response = await UserService.getTransactionData(user_id)
+            var response = await UserService.getTransactionData(user.tokendata)
           
    
             if (response.data.success) {
