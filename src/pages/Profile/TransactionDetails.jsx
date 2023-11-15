@@ -47,7 +47,7 @@ function TransactionDetails() {
     }
 
 
-
+console.log(TransactionData,'TransactionData')
 
 
     useEffect(() => {
