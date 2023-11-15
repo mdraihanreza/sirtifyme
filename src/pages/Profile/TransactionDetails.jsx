@@ -70,41 +70,26 @@ function TransactionDetails() {
                 <table style={{ border: '1px solid #000' }}>
                         <thead>
                             <tr>
-                                <th>Certificate Name</th>
-                                <th>Certificate View</th>
-                                <th>Issue Date</th>
-                                <th>Expiry Date</th>
+                                <th>Transaction Amount</th>
+                                <th>Transaction Status</th>
+                                <th>Transaction Details</th>
+                                <th>Transaction Date</th>
                             </tr>
                         </thead>
                         <tbody>
-
-                            {/* <tr>
-                                <td>BLS</td>
-                                {CertificateData.bls_status=="Yes" ?<td>{CertificateData.bls_file ? <a href={Nldata} target='_blank'><img src={view}  className='viewicon' /></a> : <p>No File Uploaded</p>}</td>:"Certificate Not Available"}
-                                {CertificateData.bls_status=="Yes" &&<td>{CertificateData?CertificateData.bls_issue_date:''}</td>}
-                                {CertificateData.bls_status=="Yes" && <td>{CertificateData?CertificateData.bls_expiry_date:''}</td>}
-                            </tr>
-                            <tr>
-                                <td>ACLS</td>
-                                {CertificateData.acls_status=="Yes" ? <td> {CertificateData.acls_file ? <a href={Sldata} target='_blank'><img src={view}  className='viewicon' /></a> : <p>No File Uploaded</p>}</td>:"Certificate Not Available"}
-                                {CertificateData.acls_status=="Yes" &&  <td>{CertificateData?CertificateData.acls_issue_date:''}</td>}
-                                {CertificateData.acls_status=="Yes" && <td>{CertificateData?CertificateData.acls_expiry_date:''}</td>}
-                            </tr>
-                            <tr>
-                                <td>PALS</td>
-                                {CertificateData.pls_status=="Yes" ?<td>   {CertificateData.pls_file ? <a href={Cdsdata} target='_blank'><img src={view}  className='viewicon' /></a> : <p>No File Uploaded</p>}</td>:"Certificate Not Available"}
-                                {CertificateData.pls_status=="Yes" && <td>{CertificateData?CertificateData.pls_issue_date:''}</td>}
-                                {CertificateData.pls_status=="Yes" && <td>{CertificateData?CertificateData.pls_expiry_date:''}</td>}
-                            </tr>
-                           
-                            {AdditionalData.map((item, index) => (
+                        {TransactionData.map((item, index) => {
+                                 return (
+                                    <>
                                 <tr key={index}>
-                                    <td>{item.certificate_name}</td>
-                                    <td> {item.certificate_file && <a href={item.certificate_file} target='_blank'><img src={view} className='viewicon' /></a>}</td>
-                                    <td>{item.certificate_issue_date}</td>
-                                    <td>{item.certificate_expiry_date}</td>
+
+                                    <td>{item.transaction_amount}</td>
+                                    <td>{item.transaction_status}</td>
+                                    <td>{item.transaction_details}</td>
+                                    <td>{item.transaction_date}</td>
                                 </tr>
-                            ))} */}
+                                </>
+                                 )
+                            })}
                         </tbody>
                     </table>
             </div>
