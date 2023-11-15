@@ -62,7 +62,7 @@ function TransactionDetails() {
 
 
 
-            <div className="tab-pane fade common-table" id="transaction-details" role="tabpanel">
+            <div className="tab-pane fade common-table" id="transactiondetails" role="tabpanel">
                 <div className="row">
                     <div className="col-md-12">
                         <h2 className="text-center">Transaction History</h2>

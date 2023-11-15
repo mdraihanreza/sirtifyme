@@ -1471,7 +1471,7 @@ function PersonalDetails() {
                                         </li>:''}
                                         <li className="nav-item" role="presentation">
                                             <a
-                                                href="#transaction-details"
+                                                href="#transactiondetails"
                                                 className="nav-link"
                                                 role="tab"
                                                 data-bs-toggle="tab"
