@@ -309,7 +309,7 @@ async updateemployementAdditional(data) {
   }
   getTransactionData(payload) {
     var token= localStorage.getItem("tokendata")
-    return axios.get(REACT_APP_API_SERVICE_URL + '/viewTransactionDetails?token='+ token +'&user_id='+ payload, TokenHelper.getHeader());
+    return axios.get(REACT_APP_API_SERVICE_URL + '/viewTransactionDetails?token='+ token , TokenHelper.getHeader());
   }
   //get view provider  details start
   getProviderProfile(payload) {
