@@ -6,6 +6,7 @@ import { useContext } from 'react';
 import { userContext } from '../../store';
 import Loader from '../Loder';
 import { Button, Modal, Form } from 'react-bootstrap';
+import moment from "moment";
 import { toast } from 'react-toastify';
 import { yupResolver } from '@hookform/resolvers/yup';
 import FileBase64 from 'react-file-base64';
@@ -85,7 +86,7 @@ console.log(TransactionData,'TransactionData')
                                     <td>{item.transaction_amount}</td>
                                     <td>{item.transaction_status}</td>
                                     <td>{item.transaction_details}</td>
-                                    <td>{item.transaction_date}</td>
+                                    <td>{moment(item.transaction_date).format("DD/MM/yy")}</td>
                                 </tr>
                                 </>
                                  )
