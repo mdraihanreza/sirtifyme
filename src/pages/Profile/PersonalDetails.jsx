@@ -21,6 +21,7 @@ import References from './Reference';
 import jQuery from "jquery";
 import TokenHelper from '../TokenHelper';
 import SubuserPage from './SubUser';
+import TransactionDetails from './TransactionDetails';
 
 function PersonalDetails() {
     const countryCodes = [
@@ -1578,6 +1579,7 @@ function PersonalDetails() {
                             <Medicalhistory />
                             <References />
                             <SubuserPage />
+                            <TransactionDetails />
                         </div>
 
                     </div>
