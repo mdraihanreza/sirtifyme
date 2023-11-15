@@ -1,21 +1,24 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import UserService from '../../services/user.service';
-// import { AuthContext } from '../../App';
+import { AuthContext } from '../../App';
 import { useContext } from 'react';
-
+import { userContext } from '../../store';
+import Loader from '../Loder';
+import { Button, Modal, Form } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import { yupResolver } from '@hookform/resolvers/yup';
 import FileBase64 from 'react-file-base64';
-import avtar from '../../assets/images/avatar.png';
-import view from '../../assets/images/view.png';
-import { userContext } from '../../store';
-import TokenHelper from '../TokenHelper';
+import deleteicon from '../../assets/images/delete.png';
 // import { licenseSchema } from '../Schemas';
-import { CertificationSchema } from '../Schemas';
-import { licenseSchema } from '../Schemas'
+import { licenseDataSchema } from '../Schemas';
+import { SubuserSchema } from '../Schemas'
+import TokenHelper from '../TokenHelper';
 import { useFieldArray, useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import DataTable from 'react-data-table-component';
 import iconpluscircle from '../../assets/images/icon-plus-circle.svg';
+
 
 
 
@@ -25,7 +28,7 @@ function TransactionDetails() {
     const [TransactionData, setTransactionData] = useState([]);
 
     var getTransactionData = async () => {
-console.log(user,'user')
+       console.log(user,'user')
         var user_id=user.id
         console.log(user_id,'p_id')
         //  alert(id)
