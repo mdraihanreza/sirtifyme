@@ -21,14 +21,13 @@ import iconpluscircle from '../../assets/images/icon-plus-circle.svg';
 
 function TransactionDetails() {
 
-    const location = useLocation();
-    var user_id=location.state.user_id
-    console.log(user_id,'p_id')
+    const { user, dispatch } = useContext(userContext);
     const [TransactionData, setTransactionData] = useState([]);
 
     var getTransactionData = async () => {
-
-
+console.log(user,'user')
+        var user_id=user.id
+        console.log(user_id,'p_id')
         //  alert(id)
         if (user_id !== '') {
             console.log("repeat");
