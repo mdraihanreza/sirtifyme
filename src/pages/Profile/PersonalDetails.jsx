@@ -1468,6 +1468,16 @@ function PersonalDetails() {
                                                 Sub User
                                             </a>
                                         </li>:''}
+                                        <li className="nav-item" role="presentation">
+                                            <a
+                                                href="#transaction-details"
+                                                className="nav-link"
+                                                role="tab"
+                                                data-bs-toggle="tab"
+                                            >
+                                                Transaction Details
+                                            </a>
+                                        </li>
                                     </>)}
                             </ul>
                         </div>

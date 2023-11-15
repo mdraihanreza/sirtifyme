@@ -307,6 +307,10 @@ async updateemployementAdditional(data) {
   async getTestimonialDetails(testimonial_id) {
     return axios.get(REACT_APP_API_SERVICE_URL + '/getTestimonialDetails?testimonial_id=' + testimonial_id, TokenHelper.getHeader());
   }
+  getTransactionData(payload) {
+    var token= localStorage.getItem("tokendata")
+    return axios.get(REACT_APP_API_SERVICE_URL + '/viewTransactionDetails?token='+ token +'&user_id='+ payload, TokenHelper.getHeader());
+  }
   //get view provider  details start
   getProviderProfile(payload) {
     var token= localStorage.getItem("tokendata")
