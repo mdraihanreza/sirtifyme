@@ -53,7 +53,7 @@ const CheckoutForm = () => {
     if(!location.state.subscription_pay){
       var sub_user_data=location.state.sub_user_data;
       sub_user_data.user_type="5";
-      fdata.append("sub_user_data",sub_user_data);
+      fdata.append("sub_user_data",JSON.stringify(sub_user_data));
     }
     
     fdata.append("email",user.email);
