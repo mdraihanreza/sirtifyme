@@ -59,6 +59,12 @@ function NonProviderList() {
             }}> <img src={view} className='viewicon'/></Link>,
            
         },
+        {
+            name: 'Payment History',
+            selector: row => <Link to="/admin/paymenthistory" state={{ user_id: row._id
+            }}> <img src={view} className='viewicon'/></Link>,
+           
+        },
        
 
 
