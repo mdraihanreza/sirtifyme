@@ -27,7 +27,7 @@ console.log(token,'token')
             console.log("repeat");
             var response = await AdminService.getPaymentHistory(non_provider_id)
           
-          
+          console.log(response.data)
             if (response.data.success) {
                 setLoader(false);
                
