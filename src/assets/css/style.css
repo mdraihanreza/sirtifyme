@@ -2245,3 +2245,17 @@ a.forgot-password {
     border-radius: 23px;
     font-weight: 600;
 }
+
+/* 16-11-23 */
+.payment.card-details .CardNumberField-input-wrapper span{
+    height: 53px;
+    overflow: hidden;
+}
+.payment.card-details .CardNumberField-input-wrapper input{
+    height: 26px;
+    z-index: 999999;
+    border: 1px solid #cdbfbf;
+    padding: 15px;
+    border-radius: 5px;
+}
+/* 16-11-23 */
