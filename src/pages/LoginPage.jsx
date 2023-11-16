@@ -57,7 +57,11 @@ function Login() {
             if(data.user_type=='4'|| data.user_type=='5' || data.user_type=='6'){
                 const token = TokenHelper.getToken();
                const res= await UserService.getPaymentDetails(token);
-             if(res.data.data.subscription_status=="0"){
+
+            if(res.data.success==false){
+                return navigate('/payment',{state:{subscription_pay:true}});
+            }
+            else if(res.data.data.subscription_status=="0"){
                return navigate('/payment',{state:{subscription_pay:true}});
              }
              navigate(`/profile`)
