@@ -61,6 +61,10 @@ getProviderconndata(payload) {
   var token= localStorage.getItem("admintoken")
     return axios.get(REACT_APP_Admin_API_SERVICE_URL + '/ProviderConnectionData?token=' + token +'&non_provider_id='+ payload, TokenHelper.getHeader());
 }
+getPaymentHistory(payload) {
+  var token= localStorage.getItem("admintoken")
+    return axios.get(REACT_APP_Admin_API_SERVICE_URL + '/PaymentHistory?token=' + token +'&non_provider_id='+ payload, TokenHelper.getHeader());
+}
 getLicense(payload) {
   var token= localStorage.getItem("admintoken")
     return axios.get(REACT_APP_Admin_API_SERVICE_URL + '/viewProviderLicensureDetails?token=' + token +'&user_id='+ payload, TokenHelper.getHeader());
