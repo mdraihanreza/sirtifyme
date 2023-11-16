@@ -83,18 +83,24 @@ const CheckoutForm = () => {
   return (
     <div className="container">
       <form onSubmit={handleSubmit}>
-    
-    <div className="row">
+
+        <div className="card-details">
+        <div className="row">
       <div className="col-md-12">
       <label>
       Card detailss:
       <CardElement />
     </label>
       </div>
-    </div>
-   <div className="col-md-12">
+      <div className="col-md-12">
    <button type="submit" disabled={!stripe}>Pay</button>
    </div>
+    </div>
+
+        </div>
+    
+   
+  
   </form>
     </div>
   );
