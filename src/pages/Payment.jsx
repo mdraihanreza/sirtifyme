@@ -88,8 +88,10 @@ const CheckoutForm = () => {
       <div className="col-md-12">
       <label>
       Card detailss:
-      <CardElement />
+     
     </label>
+
+    <div> <CardElement /></div>
       </div>
       <div className="col-md-12">
    <button type="submit" disabled={!stripe}>Pay</button>
