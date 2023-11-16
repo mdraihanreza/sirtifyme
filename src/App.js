@@ -63,6 +63,7 @@ import OtpPage from './pages/OtpPage';
 import PasswordChange from './pages/PasswordChange';
 import AllConnection from './pages/AllConnection';
 import Payment from './pages/Payment.jsx';
+import PaymentHistory from './admin/Components/CMS/Payment History.jsx';
 
 // import Demo  from '../src/pages/Demo';
 
@@ -128,6 +129,7 @@ function App() {
 
                 <Route path='providerlist' element={<RequireAuth>< ProviderList /></RequireAuth>}></Route>
                 <Route path='providerconnlist' element={<RequireAuth>< ProviderConnectionist /></RequireAuth>}></Route>
+                <Route path='paymenthistory' element={<RequireAuth>< PaymentHistory /></RequireAuth>}></Route>
                 <Route path='nonproviderlist' element={<RequireAuth>< NonProviderList /></RequireAuth>}></Route>
                 <Route path='providerdetails' element={<RequireAuth>< PersonalDetailsPage/></RequireAuth>}></Route>
                 <Route path='about' element={<RequireAuth>< AboutusPage /></RequireAuth>}></Route>
