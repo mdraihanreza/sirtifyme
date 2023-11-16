@@ -92,7 +92,7 @@ console.log(token,'token')
                     <Container>
                         <div className='provider_datatable'>
                             <DataTable
-                                title="Provider List"
+                                title="Payment History"
                                 columns={columns}
                                 data={records}
                                 pagination
