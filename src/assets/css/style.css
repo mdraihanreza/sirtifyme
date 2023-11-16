@@ -2286,6 +2286,11 @@ a.forgot-password {
     color:#09518C;
     border: 1px solid #09518c;
 }
+@media only screen and (max-width:991px){
+    .payment.card-details {
+        width: 70%;
+    }
+}
 @media only screen and (max-width:767px){
     .payment.card-details {
         width: 100%;
