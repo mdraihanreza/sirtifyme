@@ -37,7 +37,7 @@ const CheckoutForm = () => {
     }else{
     console.log(token,'tokendata')
  
-    var amount=location.state.subscription_pay?39900:5000;
+    var amount=location.state.subscription_pay?399:50;
     fdata.append("amount", amount);
     fdata.append("token1", token.id);
     fdata.append("transaction_amount", amount);
