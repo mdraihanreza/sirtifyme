@@ -2261,5 +2261,6 @@ a.forgot-password {
 .payment.card-details {
     width:45%;
     margin: auto;
+    padding: 40px;
 }
 /* 16-11-23 */
