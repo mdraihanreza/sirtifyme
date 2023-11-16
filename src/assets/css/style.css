@@ -2285,5 +2285,11 @@ a.forgot-password {
 .payment.card-details button:hover{
     background-color: transparent;
     color:#09518C;
+    border: 1px solid #09518c;
+}
+@media only screen and (max-width:767px){
+    .payment.card-details {
+        width: 100%;
+    }
 }
 /* 16-11-23 */
