@@ -2263,4 +2263,27 @@ a.forgot-password {
     margin: auto;
     padding: 40px;
 }
+.payment.card-details label {
+    display: block;
+    margin-bottom: 12px;
+}
+.card-field{
+    border: 1px solid #e3d7d7;
+    height: 40px;
+    align-items: center;
+    padding: 11px 10px;
+}
+.payment.card-details button {
+    background-color: #09518c;
+    border-color: #09518c;
+    padding: 7px 40px;
+    border: 0;
+    color: #fff;
+    border-radius: 5px;
+    margin: 19px 0;
+}
+.payment.card-details button:hover{
+    background-color: transparent;
+    color:#09518C;
+}
 /* 16-11-23 */
