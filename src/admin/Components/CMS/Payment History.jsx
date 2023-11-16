@@ -56,7 +56,7 @@ console.log(token,'token')
         {
             name: 'Transaction Status',
             selector: row => {  
-                if (row.transaction_status === 1) {
+                if (row.transaction_status =='1') {
                 return <p type="button" className="btn btn-accept" style={{color:"#09518C"}}>
                 Active
             </p>;
