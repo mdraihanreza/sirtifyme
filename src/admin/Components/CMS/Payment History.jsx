@@ -75,7 +75,7 @@ console.log(token,'token')
           },
         {
             name: 'Transaction Date',
-            selector: row => row.transaction_date,
+            selector: row => {moment(row.transaction_date).format("DD/MM/yy")},
             sortable: true,
         },
         
