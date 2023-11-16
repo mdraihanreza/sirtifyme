@@ -84,7 +84,11 @@ console.log(TransactionData,'TransactionData')
                                 <tr key={index}>
 
                                     <td>{item.transaction_amount}</td>
-                                    <td>{item.transaction_status}</td>
+                                    <td>{item.transaction_status==1?<p type="button" className="btn btn-accept" style={{color:"#09518C"}}>
+                Active
+            </p>:<p type="button" className="btn btn-accept" style={{color:"#09518C"}}>
+                Inactive
+            </p>}</td>
                                     <td>{item.transaction_details}</td>
                                     <td>{moment(item.transaction_date).format("DD/MM/yy")}</td>
                                 </tr>
