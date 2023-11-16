@@ -87,7 +87,7 @@ const CheckoutForm = () => {
     <div className="row">
       <div className="col-md-12">
       <label>
-      Card details:
+      Card detailss:
       <CardElement />
     </label>
       </div>
