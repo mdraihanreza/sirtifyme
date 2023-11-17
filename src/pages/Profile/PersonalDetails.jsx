@@ -20,6 +20,7 @@ import Medicalhistory from './MedicalHistory';
 import References from './Reference';
 import jQuery from "jquery";
 import TokenHelper from '../TokenHelper';
+import { useNavigate } from "react-router-dom";
 import SubuserPage from './SubUser';
 import TransactionDetails from './TransactionDetails';
 import moment from 'moment';
@@ -1247,6 +1248,7 @@ function PersonalDetails() {
     const [filename, setFilename] = useState("Select Your Document");
     const [filedata, setFiledata] = useState("");
     const [loader, setLoader] = useState(false);
+    const navigate = useNavigate();
     console.log(user, 'userinfotoken')
 
     //    var token=user.tokendata
@@ -1396,7 +1398,7 @@ function PersonalDetails() {
             {/* =================== Profile Start================================ */}
             <section className="profile">
                 <div className="container">
-                    {SubcriptionAlert && <span>{SubcriptionAlert}</span>}
+                    {SubcriptionAlert && <span>{SubcriptionAlert} <button onClick={e=>navigate('/payment',{state:{subscription_pay:true}})}>Pay Now</button></span>}
                     {/* =================== Profile Start================================ */}
                     <div className="out-wrap">
                         <div className="tab-nav-wrapper">
