@@ -1326,7 +1326,7 @@ function PersonalDetails() {
                     }else{
                         setSubcriptionAlert("Subscription Package Expire Today");
                     }
-                }else{
+                }else if(remainingDays < 0){
                     setSubcriptionAlert("Subscription Package End");
                 }
 
