@@ -1398,7 +1398,7 @@ function PersonalDetails() {
             {/* =================== Profile Start================================ */}
             <section className="profile">
                 <div className="container">
-                    {SubcriptionAlert && <span>{SubcriptionAlert} <button onClick={e=>navigate('/payment',{state:{subscription_pay:true}})}>Pay Now</button></span>}
+                    {SubcriptionAlert && <span>{SubcriptionAlert} <button onClick={e=>navigate('/payment2',{state:{subscription_pay:true}})}>Pay Now</button></span>}
                     {/* =================== Profile Start================================ */}
                     <div className="out-wrap">
                         <div className="tab-nav-wrapper">
