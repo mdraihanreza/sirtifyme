@@ -111,7 +111,7 @@ function App() {
                 <Route path='/contact' element={<Contact />} />
                 <Route path='/testimonial' element={<Testimonal />} />
                 <Route path='/payment' element={<LoginAuth><Payment /></LoginAuth>} />
-                <Route path='/payment2' element={<LoginAuth><Payment2 /></LoginAuth>} />
+                {/* <Route path='/payment2' element={<LoginAuth><Payment2 /></LoginAuth>} /> */}
                 <Route path='/notification' element={<LoginAuth><NotificationPage /></LoginAuth>} />
                 <Route path='/myconnection' element={<LoginAuth><SubscriptionAuth><MyConnection /></SubscriptionAuth></LoginAuth>} />
                 <Route path='/requestlist' element={<LoginAuth><NotificationListPage /></LoginAuth>} />
