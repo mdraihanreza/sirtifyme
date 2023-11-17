@@ -42,7 +42,7 @@ const CheckoutForm = () => {
     fdata.append("amount", amount);
     fdata.append("token1", token.id);
     fdata.append("transaction_amount", amount);
-    fdata.append("transaction_details",'buying subscription');
+    fdata.append("transaction_details",transaction_details);
     fdata.append("subscription_amount", amount);
     fdata.append("subscription_duration",'30 days');
     fdata.append("transaction_user_id",user.id);
