@@ -2286,6 +2286,27 @@ a.forgot-password {
     color:#09518C;
     border: 1px solid #09518c;
 }
+/* =======17-11-2023======Start */
+/* Profile-alert */
+.profile-alert{
+    display: block;
+    background: #FCF8E3;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    color: #A94442;
+    font-size: 18px;
+}
+.profile-alert button{
+    background-color: #09518c;
+    border: navajowhite;
+    padding: 6px 10px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 8px;
+}
+/* =======17-11-2023======End */
+
 @media only screen and (max-width:991px){
     .payment.card-details {
         width: 70%;
