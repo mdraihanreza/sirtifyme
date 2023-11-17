@@ -311,6 +311,10 @@ async updateemployementAdditional(data) {
     var token= localStorage.getItem("tokendata")
     return axios.get(REACT_APP_API_SERVICE_URL + '/viewTransactionDetails?token='+ token , TokenHelper.getHeader());
   }
+  getSubscriptionData(payload) {
+    var token= localStorage.getItem("tokendata")
+    return axios.get(REACT_APP_API_SERVICE_URL + '/viewSubscriptionDetails?token='+ token , TokenHelper.getHeader());
+  }
   //get view provider  details start
   getProviderProfile(payload) {
     var token= localStorage.getItem("tokendata")

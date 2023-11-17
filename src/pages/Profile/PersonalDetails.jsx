@@ -1242,6 +1242,7 @@ function PersonalDetails() {
     const { user, dispatch } = useContext(userContext);
     const [UserProfileData, setUserProfileData] = useState([]);
     const [selectedCode, setSelectedCode] = useState(countryCodes[0]);
+    const [TransactionData, setTransactionData] = useState([]);
     const [filename, setFilename] = useState("Select Your Document");
     const [filedata, setFiledata] = useState("");
     const [loader, setLoader] = useState(false);
@@ -1284,44 +1285,31 @@ function PersonalDetails() {
     }
 
     //  getProfileData();
+    //===============//
+    var getSubscriptionData = async () => {
+        var token = TokenHelper.getToken();
+        if (token !== null) {
+            console.log("repeat");
+            var response = await UserService.getSubscriptionData(user.tokendata)
+    
+    
+            if (response.data.success) {
+    
+                setTransactionData(response.data.data)
+    
+                console.log(response.data)
+            }
+        }
+        else {
+            console.log("not get token")
+        }
+    }
+    
+   
+    //=============//
     useEffect(() => {
-
-        // alert(user.id)
-
-        // Scroll tabs
-
-
-        // jQuery.fn.tabbing = function (options) {
-        //   // alert(1)
-        //   var opts = { delayTime: 300 };
-        //   options = options || {};
-        //   opts = jQuery.extend(opts, options);
-        //   return this.each(function () {
-        //     jQuery(this).on('click', function (event) {
-        //       event.preventDefault();
-        //       var sum = 0;
-        //       jQuery(this).prevAll().each(function () { sum += jQuery(this).width(); });
-        //       var get = document.getElementById('tabs').scrollWidth
-        //       var dist = sum - (jQuery(this).parent().width() - jQuery(this).width()) / 2;
-        //       if (dist < 0) {
-        //         dist = 0;
-        //       }
-        //       /* else if(dist+sum > get){
-        //         dist = get-sum+dist+dist;
-        //       } */
-        //       jQuery(this).parent().animate({
-        //         scrollLeft: dist
-        //       }, opts['delayTime']);
-        //     });
-        //   });
-        // };
-
-        // jQuery('#tabs li').tabbing();
-
-
-        // jQuery('#tabs li').click(function () {
-        //   var hashit = jQuery(this).find('a').attr('href')
-        // });
+        getSubscriptionData();
+        
 
         getProfileData();
 
@@ -1373,6 +1361,7 @@ function PersonalDetails() {
             {/* =================== Profile Start================================ */}
             <section className="profile">
                 <div className="container">
+                    <P>Your Package Expire Soon</P>
                     {/* =================== Profile Start================================ */}
                     <div className="out-wrap">
                         <div className="tab-nav-wrapper">
