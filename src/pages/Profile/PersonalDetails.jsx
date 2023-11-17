@@ -1243,7 +1243,7 @@ function PersonalDetails() {
     const { user, dispatch } = useContext(userContext);
     const [UserProfileData, setUserProfileData] = useState([]);
     const [selectedCode, setSelectedCode] = useState(countryCodes[0]);
-    const [TransactionData, setTransactionData] = useState([]);
+    const [SubcriptionAlert, setSubcriptionAlert] = useState("");
     const [filename, setFilename] = useState("Select Your Document");
     const [filedata, setFiledata] = useState("");
     const [loader, setLoader] = useState(false);
@@ -1296,7 +1296,7 @@ function PersonalDetails() {
 
             if (response.data.success) {
 
-                setTransactionData(response.data.data);
+                
                 var subcrip_data = response.data.data;
 
                 // subscription end date
@@ -1311,9 +1311,23 @@ function PersonalDetails() {
                 // Calculate the difference in days
                 const remainingDays = targetDate.diff(currentDate, 'days');
 
-                alert(remainingDays)
+                // alert(remainingDays);
+
+                // ====== msg status ====
+                // 1: subcription packahe not select
+                // 2: subcription expire soon
+                // 3: subcription end
+
+                if(remainingDays <=3 && remainingDays >=1)
+                {
+                    setSubcriptionAlert("Subscription Expire Soon");
+                }else{
+                    setSubcriptionAlert("Subscription End");
+                }
 
                 console.log(response.data)
+            }else{
+                setSubcriptionAlert("Buy a Subscription");
             }
         }
         else {
@@ -1377,7 +1391,7 @@ function PersonalDetails() {
             {/* =================== Profile Start================================ */}
             <section className="profile">
                 <div className="container">
-                    <p>Your Package Expire Soon</p>
+                    {SubcriptionAlert && <span>{SubcriptionAlert}</span>}
                     {/* =================== Profile Start================================ */}
                     <div className="out-wrap">
                         <div className="tab-nav-wrapper">
