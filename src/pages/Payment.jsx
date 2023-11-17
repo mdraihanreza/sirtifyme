@@ -82,17 +82,30 @@ const CheckoutForm = () => {
 
 
   return (
-    <form onSubmit={handleSubmit}>
-    
+    <div className="container">
+         <div className="payment card-details">
+      <form onSubmit={handleSubmit}>
+        <div className="row">
+      <div className="col-md-12">
       <label>
-        Card details:
-        <CardElement />
-      </label>
-      <br />
-      <button type="submit" disabled={!stripe}>
-        Pay
-      </button>
-    </form>
+      Card detailss:
+     
+    </label>
+
+    <div className="card-field"> <CardElement /></div>
+      </div>
+      <div className="col-md-12">
+   <button type="submit" disabled={!stripe}>Pay</button>
+   </div>
+    </div>
+
+
+      
+  
+  
+  </form>
+  </div>
+    </div>
   );
 };
 

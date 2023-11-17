@@ -2245,3 +2245,55 @@ a.forgot-password {
     border-radius: 23px;
     font-weight: 600;
 }
+
+/* 16-11-23 */
+.CardNumberField-input-wrapper span{
+    height: 53px;
+    overflow: hidden;
+}
+.CardNumberField-input-wrapper input{
+    height: 26px;
+    z-index: 999999;
+    border: 1px solid #cdbfbf;
+    padding: 15px;
+    border-radius: 5px;
+}
+.payment.card-details {
+    width:45%;
+    margin: auto;
+    padding: 40px;
+}
+.payment.card-details label {
+    display: block;
+    margin-bottom: 12px;
+}
+.card-field{
+    border: 1px solid #e3d7d7;
+    height: 40px;
+    align-items: center;
+    padding: 11px 10px;
+}
+.payment.card-details button {
+    background-color: #09518c;
+    border-color: #09518c;
+    padding: 7px 40px;
+    color: #fff;
+    border-radius: 5px;
+    margin: 19px 0;
+}
+.payment.card-details button:hover{
+    background-color: transparent;
+    color:#09518C;
+    border: 1px solid #09518c;
+}
+@media only screen and (max-width:991px){
+    .payment.card-details {
+        width: 70%;
+    }
+}
+@media only screen and (max-width:767px){
+    .payment.card-details {
+        width: 100%;
+    }
+}
+/* 16-11-23 */

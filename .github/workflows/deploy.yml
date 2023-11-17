@@ -29,4 +29,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           protocol: ftp
-          local-dir: ./build/
+          local-dir: ./build/ 
