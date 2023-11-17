@@ -85,7 +85,7 @@ function TransactionDetails() {
 
                                         <td>{item.transaction_amount}</td>
                                         <td>{item.transaction_status == '1' ? <p type="button" className="btn btn-accept" style={{ color: "#09518C" }}>
-                                            Active
+                                        Succeeded
                                         </p> : <p type="button" className="btn btn-accept" style={{ color: "#09518C" }}>
                                             Inactive
                                         </p>}</td>
