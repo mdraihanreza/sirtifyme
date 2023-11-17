@@ -1318,16 +1318,21 @@ function PersonalDetails() {
                 // 2: subcription expire soon
                 // 3: subcription end
 
-                if(remainingDays <=3 && remainingDays >=1)
+                if(remainingDays <=3 && remainingDays >=0)
                 {
-                    setSubcriptionAlert("Subscription Expire Soon");
+                    if(remainingDays != 0)
+                    {
+                        setSubcriptionAlert("Subscription Package Expire within "+remainingDays+"days");
+                    }else{
+                        setSubcriptionAlert("Subscription Package Expire Today");
+                    }
                 }else{
-                    setSubcriptionAlert("Subscription End");
+                    setSubcriptionAlert("Subscription Package End");
                 }
 
                 console.log(response.data)
             }else{
-                setSubcriptionAlert("Buy a Subscription");
+                setSubcriptionAlert("Buy a Subscription Package");
             }
         }
         else {
