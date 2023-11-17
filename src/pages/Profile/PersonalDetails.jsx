@@ -1361,7 +1361,7 @@ function PersonalDetails() {
             {/* =================== Profile Start================================ */}
             <section className="profile">
                 <div className="container">
-                    <P>Your Package Expire Soon</P>
+                    <p>Your Package Expire Soon</p>
                     {/* =================== Profile Start================================ */}
                     <div className="out-wrap">
                         <div className="tab-nav-wrapper">
