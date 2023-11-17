@@ -1298,7 +1298,7 @@ function PersonalDetails() {
 
             if (response.data.success) {
 
-                
+
                 var subcrip_data = response.data.data;
 
                 // subscription end date
@@ -1320,20 +1320,18 @@ function PersonalDetails() {
                 // 2: subcription expire soon
                 // 3: subcription end
 
-                if(remainingDays <=3 && remainingDays >=0)
-                {
-                    if(remainingDays != 0)
-                    {
-                        setSubcriptionAlert("Subscription Package Expire within "+remainingDays+"days");
-                    }else{
+                if (remainingDays <= 3 && remainingDays >= 0) {
+                    if (remainingDays != 0) {
+                        setSubcriptionAlert("Subscription Package Expire within " + remainingDays + "days");
+                    } else {
                         setSubcriptionAlert("Subscription Package Expire Today");
                     }
-                }else if(remainingDays < 0){
+                } else if (remainingDays < 0) {
                     setSubcriptionAlert("Subscription Package End");
                 }
 
                 console.log(response.data)
-            }else{
+            } else {
                 setSubcriptionAlert("Buy a Subscription Package");
             }
         }
@@ -1398,7 +1396,11 @@ function PersonalDetails() {
             {/* =================== Profile Start================================ */}
             <section className="profile">
                 <div className="container">
-                    {SubcriptionAlert && <span className="profile-alert">{SubcriptionAlert} <button onClick={e=>navigate('/payment',{state:{subscription_pay:true}})}>Pay Now</button></span>}
+                    {user.user_type == 4 || user.user_type == 5 || user.user_type == 6 ? (
+                        <>
+                            {SubcriptionAlert && <span className="profile-alert">{SubcriptionAlert} <button onClick={e => navigate('/payment', { state: { subscription_pay: true } })}>Pay Now</button></span>}
+                        </>
+                    ) : ''}
                     {/* =================== Profile Start================================ */}
                     <div className="out-wrap">
                         <div className="tab-nav-wrapper">
