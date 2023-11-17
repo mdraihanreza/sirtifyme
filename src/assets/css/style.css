@@ -2304,7 +2304,10 @@ a.forgot-password {
     color: #fff;
     font-size: 14px;
     border-radius: 8px;
+    color: red;
 }
+
+
 /* =======17-11-2023======End */
 
 @media only screen and (max-width:991px){
