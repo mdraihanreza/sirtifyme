@@ -22,6 +22,7 @@ import jQuery from "jquery";
 import TokenHelper from '../TokenHelper';
 import SubuserPage from './SubUser';
 import TransactionDetails from './TransactionDetails';
+import moment from 'moment';
 
 function PersonalDetails() {
     const countryCodes = [
@@ -1252,7 +1253,7 @@ function PersonalDetails() {
     var getProfileData = async () => {
         setLoader(true);
         var token = TokenHelper.getToken();
- 
+
 
         //  alert(id)
         if (token !== null) {
@@ -1291,12 +1292,27 @@ function PersonalDetails() {
         if (token !== null) {
             console.log("repeat");
             var response = await UserService.getSubscriptionData(user.tokendata)
-    
-    
+
+
             if (response.data.success) {
-    
-                setTransactionData(response.data.data)
-    
+
+                setTransactionData(response.data.data);
+                var subcrip_data = response.data.data;
+
+                // subscription end date
+                const subscription_end_date = subcrip_data[0].subscription_end_date;
+
+                // Get the current date
+                const currentDate = moment();
+
+                // Convert the timestamp to a moment object
+                const targetDate = moment(subscription_end_date);
+
+                // Calculate the difference in days
+                const remainingDays = targetDate.diff(currentDate, 'days');
+
+                alert(remainingDays)
+
                 console.log(response.data)
             }
         }
@@ -1304,12 +1320,12 @@ function PersonalDetails() {
             console.log("not get token")
         }
     }
-    
-   
+
+
     //=============//
     useEffect(() => {
         getSubscriptionData();
-        
+
 
         getProfileData();
 
@@ -1323,10 +1339,10 @@ function PersonalDetails() {
         fdata.append("name", data.name);
         fdata.append("country_code", data.country_code);
         fdata.append("only_mobile_no", data.only_mobile_no);
-        if (data.profile_image!== null) {
-        fdata.append("profile_image", data.profile_image[0]);
+        if (data.profile_image !== null) {
+            fdata.append("profile_image", data.profile_image[0]);
         }
-        if (data.cv!== null) {
+        if (data.cv !== null) {
             fdata.append("cv", data.cv[0]);
         }
 
@@ -1448,7 +1464,7 @@ function PersonalDetails() {
                                                 Personal Details
                                             </a>
                                         </li>
-                                      {user.sub_user_type=='0'? <li className="nav-item" role="presentation">
+                                        {user.sub_user_type == '0' ? <li className="nav-item" role="presentation">
                                             <a
                                                 href="#hospitaluser"
                                                 className="nav-link"
@@ -1457,7 +1473,7 @@ function PersonalDetails() {
                                             >
                                                 Sub User
                                             </a>
-                                        </li>:''}
+                                        </li> : ''}
                                         <li className="nav-item" role="presentation">
                                             <a
                                                 href="#transactiondetails"
