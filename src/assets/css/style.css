@@ -2320,15 +2320,3 @@ a.forgot-password {
     }
 }
 /* 16-11-23 */
-
-
-/* custom-debit-cart 21-11-2023 */
-.card-field{
-    height: 190px;
-}
-.card-field .StripeElement.StripeElement--empty{
-    height: 100%;
-}
-.card-field iframe{
-    height: 100%;
-}
