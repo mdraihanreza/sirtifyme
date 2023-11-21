@@ -2326,6 +2326,9 @@ a.forgot-password {
 .card-field{
     height: 190px;
 }
+.card-field .StripeElement.StripeElement--empty{
+    height: 100%;
+}
 .card-field iframe{
     height: 100%;
 }
