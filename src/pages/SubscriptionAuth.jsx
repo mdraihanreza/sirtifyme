@@ -43,10 +43,15 @@ return children;
 async function checkSub(callback){
     const token = TokenHelper.getToken();
     const res= await UserService.getPaymentDetails(token);
+    // console.log("res ",res.data);
+    if(res.data.success==true){
     if(res.data.data.subscription_status=="0"){
         callback({status:true});
     }else{
         callback({status:false});
+    }}
+    else{
+        callback({status:true});
     }
 }
 
