@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
-import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
+import { useStripe, useElements, CardElement,CardNumberElement, CardCvcElement, CardExpiryElement } from '@stripe/react-stripe-js';
 import { useContext } from 'react';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../App';
@@ -10,7 +10,6 @@ import { userContext } from '../store';
 import { useNavigate } from "react-router-dom";
 import { Link, useLocation } from 'react-router-dom';
 import UserService from "../services/user.service";
-import Cards from 'react-credit-cards-2';
 // Replace 'your-publishable-key' with your actual Stripe publishable key
 const stripePromise = loadStripe('pk_test_51O9uKdHf7NHBBEzBrpgXeOPuoSXRSRLE0jJ3O8QJrofz31X7xZLrgbDrRANJO07jZAs0PIW8b9YIyUuaiXmdaKSO00KYRvezjj');
 
@@ -18,8 +17,6 @@ const CheckoutForm = () => {
   const { user, dispatch } = useContext(userContext);
   const [loader, setLoader] = useState(false);
   const navigate = useNavigate();
-
-  const [card, setCard] = useState({});
   const stripe = useStripe();
   const elements = useElements();
   const location = useLocation();
@@ -75,9 +72,6 @@ const CheckoutForm = () => {
 
  
   };
-  const handleCardChange = (e) => {
-    setCard({ ...card, [e.target.name]: e.target.value });
-  };
 
      useEffect(() => {
         
@@ -90,7 +84,7 @@ const CheckoutForm = () => {
   return (
     <div className="container">
          <div className="payment card-details">
-      {/* <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <div className="row">
       <div className="col-md-12">
       <label>
@@ -105,17 +99,11 @@ const CheckoutForm = () => {
    </div>
     </div>
 
-  </form> */}
-  <form onSubmit={handleSubmit}>
-      <Cards
-        number={card.number}
-        name={card.name}
-        expiry={card.expiry}
-        cvc={card.cvc}
-      />
-      <CardElement onChange={handleCardChange} />
-      <button type="submit">Pay</button>
-    </form>
+
+      
+  
+  
+  </form>
   </div>
     </div>
   );
