@@ -27,9 +27,9 @@ function SubuserPage() {
     const data = []
     const [records, setRecords] = useState([]);
     const [Countuser, setCountuser] = useState(0);
-    
+
     const [showModal, setShowModal] = useState(false);
-    const {user,dispatch} = useContext(userContext);
+    const { user, dispatch } = useContext(userContext);
     const navigate = useNavigate();
     const columns = [
 
@@ -50,19 +50,21 @@ function SubuserPage() {
         },
         {
             name: 'User Role',
-            selector: row => {if (row.sub_user_type === 2) {
-                return 'Recruiter';
-            } else {
-                return 'HR';
-            }},
+            selector: row => {
+                if (row.sub_user_type === 2) {
+                    return 'Recruiter';
+                } else {
+                    return 'HR';
+                }
+            },
             sortable: true,
         },
         {
             name: 'Delete',
             cell: (row) => (
-                <button style={{border:0}} onClick={() => handleDelete(row.user_id)}><img src={deleteicon} className='viewicon' /></button>
-              ),
-              
+                <button style={{ border: 0 }} onClick={() => handleDelete(row.user_id)}><img src={deleteicon} className='viewicon' /></button>
+            ),
+
             // selector: row => <Link to="/admin/faqsingle" state={{
             //     faq_id: row.faq_id
             // }}> <img src={view} className='viewicon' /></Link>,
@@ -70,8 +72,8 @@ function SubuserPage() {
         },
 
     ];
-   
-   
+
+
     var getuserData = async () => {
 
         var token = TokenHelper.getToken();
@@ -82,28 +84,28 @@ function SubuserPage() {
             console.log("id ", response.data.data.user_id)
             //  alert("sss" ,response.data.success)
             if (response.data.success) {
-               
-                
+
+
                 setLoader(false);
-                var user_id=response.data.data.user_id
+                var user_id = response.data.data.user_id
                 var responce = await UserService.getListSubuser(user_id)
                 if (responce.data.success) {
-                    console.log(responce.data,'response.data.count')
+                    console.log(responce.data, 'response.data.count')
                     setCountuser(responce.data.count)
                     setRecords(responce.data.data)
-    
-    
+
+
                     console.log(responce.data.data)
-                }  else {
-                        setRecords([])
+                } else {
+                    setRecords([])
                     console.log("not get id")
                 }
                 // setFilename(response.data.data.cv)
-               
-              
+
+
             }
         }
-console.log(user)
+        console.log(user)
 
     }
     var handleDelete = async (user_id) => {
@@ -114,13 +116,13 @@ console.log(user)
             if (response.data.success) {
 
                 setLoader(false)
-            
+
                 toast.success("Removed")
-                
+
             }
-            
+
         }
-        await getuserData(); 
+        await getuserData();
     }
     // Function to open the modal
     const openModal = () => {
@@ -131,20 +133,26 @@ console.log(user)
     const closeModal = () => {
         setShowModal(false);
     };
-    console.log(Countuser,'Countuser')
+    console.log(Countuser, 'Countuser')
     const dataSubmit = async (data) => {
 
         // ========= check subscription ========
         const token = TokenHelper.getToken();
-        const res= await UserService.getPaymentDetails(token);
-        if(res.data.data.subscription_status=="0"){
-        return navigate('/payment',{state:{subscription_pay:true}});
-        }   
+        const res = await UserService.getPaymentDetails(token);
 
-        if(Countuser>2){
-            return navigate('/payment',{state:{subscription_pay:false,sub_user_data:data}});
+        if (res.data.success) {
+            if (res.data.data.subscription_status == "0") {
+                return navigate('/payment-plan', { state: { subscription_pay: true } });
+            }
+
+            if (Countuser > 2) {
+                return navigate('/payment-plan', { state: { subscription_pay: false, sub_user_data: data } });
+            }
         }
-       
+        else {
+            return navigate('/payment-plan', { state: { subscription_pay: true } });
+        }
+
         setLoader(true);
         // alert(data.profile_image)
         // console.log("fdata  ", data.cv[0]);
@@ -155,18 +163,18 @@ console.log(user)
         fdata.append("country_code", data.country_code);
         fdata.append("only_mobile_no", data.only_mobile_no);
         fdata.append("sub_user_type", data.sub_user_type);
-        fdata.append("user_type","5");
+        fdata.append("user_type", "5");
         fdata.append("password", data.password);
 
         var response = await UserService.CreateSubuser(fdata);
         // alert(response,'response')
 
         console.log(response.data.message)
-       
+
         if (response.data.success) {
             setLoader(false);
             toast.success(response.data.message)
-        }else{
+        } else {
             setLoader(false);
             toast.error(response.data.message)
         }
@@ -174,10 +182,10 @@ console.log(user)
         console.log(response.data)
         reset()
         closeModal()
-        await getuserData(); 
+        await getuserData();
 
 
-        
+
     }
     //  getProfileData();
     useEffect(() => {
@@ -1406,10 +1414,10 @@ console.log(user)
     return (
         <>
 
-           
+
 
             <div className="tab-pane fade" id="hospitaluser" role="tabpanel">
-            <button className='subuser_add_btn' onClick={openModal}>Add</button>
+                <button className='subuser_add_btn' onClick={openModal}>Add</button>
                 <DataTable
                     title="Sub UserList"
                     columns={columns}
@@ -1431,16 +1439,16 @@ console.log(user)
                             <Form.Control
                                 type="text" {...register("name")}
                             />
-                             <p className='form-field-error'>{errors.name?.message}</p>
+                            <p className='form-field-error'>{errors.name?.message}</p>
                         </Form.Group>
                         <Form.Group controlId="email" className='bottom_spacing'>
                             <Form.Label>Email</Form.Label>
                             <Form.Control
                                 type="email" {...register("email")}
                             />
-                               <p className='form-field-error'>{errors.email?.message}</p>
+                            <p className='form-field-error'>{errors.email?.message}</p>
                         </Form.Group>
-                       
+
                         <Form.Group controlId="phonenumber" className='bottom_spacing'>
                             <Form.Label>PhoneNumber</Form.Label>
                             <div className='clearfix'>
@@ -1456,20 +1464,20 @@ console.log(user)
                                     <p className='form-field-error'>{errors.country_code?.message}</p>
                                 </div>
                                 <div className='country_phone'>
-                                <Form.Control
-                                type="text" {...register("only_mobile_no")}
-                            />
-                             <p className='form-field-error'>{errors.only_mobile_no?.message}</p>
+                                    <Form.Control
+                                        type="text" {...register("only_mobile_no")}
+                                    />
+                                    <p className='form-field-error'>{errors.only_mobile_no?.message}</p>
                                 </div>
                             </div>
-                            
-                           
+
+
                         </Form.Group>
                         <Form.Group controlId="password" className='bottom_spacing'>
                             <Form.Label>UserType</Form.Label>
                             <Form.Select {...register("sub_user_type")}>
                                 <option value="1">Hr</option>
-                                <option  value="2">Recruiter</option>
+                                <option value="2">Recruiter</option>
                             </Form.Select>
                             <Form.Text className='form-field-error'>{errors.sub_user_type?.message}</Form.Text>
                         </Form.Group>
@@ -1478,21 +1486,21 @@ console.log(user)
                             <Form.Control
                                 type="password" {...register("password")}
                             />
-                             <p className='form-field-error'>{errors.password?.message}</p>
+                            <p className='form-field-error'>{errors.password?.message}</p>
                         </Form.Group>
                         <Form.Group controlId="password" className='bottom_spacing'>
                             <Form.Label>Confirm Password</Form.Label>
                             <Form.Control
                                 type="password" {...register("conpassword")}
                             />
-                             <p className='form-field-error'>{errors.conpassword?.message}</p>
+                            <p className='form-field-error'>{errors.conpassword?.message}</p>
                         </Form.Group>
-                        <Button  type="submit" >
+                        <Button type="submit" >
                             Submit
                         </Button>
                     </Form>
                 </Modal.Body>
-                
+
             </Modal>
             {loader && <Loader />}
         </>

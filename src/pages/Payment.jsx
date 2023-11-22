@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
-import { useStripe, useElements, CardElement,CardNumberElement, CardCvcElement, CardExpiryElement } from '@stripe/react-stripe-js';
+import { useStripe, useElements, CardElement, CardNumberElement, CardCvcElement, CardExpiryElement } from '@stripe/react-stripe-js';
 import { useContext } from 'react';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../App';
@@ -28,83 +28,101 @@ const CheckoutForm = () => {
       return;
     }
 
-    const { token, error } = await stripe.createToken(elements.getElement(CardElement), {
+    const { token, error } = await stripe.createToken(elements.getElement(CardNumberElement, CardCvcElement, CardExpiryElement), {
       name: 'Customer Name',
     });
 
     if (error) {
       console.error(error);
-    }else{
-    console.log(token,'tokendata')
- 
-    var amount=location.state.subscription_pay?399:50;
-    var transaction_details=location.state.subscription_pay?'buying subscription':'Subuser Payment';
-    fdata.append("amount", amount);
-    fdata.append("token1", token.id);
-    fdata.append("transaction_amount", amount);
-    fdata.append("transaction_details",transaction_details);
-    fdata.append("subscription_amount", amount);
-    fdata.append("subscription_duration",'30 days');
-    fdata.append("transaction_user_id",user.id);
-    fdata.append("subscription_user_id",user.id);
-    fdata.append("user_type",user.user_type);
+    } else {
+      console.log(token, 'tokendata')
 
-    fdata.append("sub_user_add_status",!location.state.subscription_pay);
-    
-    if(!location.state.subscription_pay){
-      var sub_user_data=location.state.sub_user_data;
-      sub_user_data.user_type="5";
-      fdata.append("sub_user_data",JSON.stringify(sub_user_data));
+      var amount = location.state.subscription_pay ? 399 : 50;
+      var transaction_details = location.state.subscription_pay ? 'buying subscription' : 'Subuser Payment';
+      fdata.append("amount", amount);
+      fdata.append("token1", token.id);
+      fdata.append("transaction_amount", amount);
+      fdata.append("transaction_details", transaction_details);
+      fdata.append("subscription_amount", amount);
+      fdata.append("subscription_duration", '30 days');
+      fdata.append("transaction_user_id", user.id);
+      fdata.append("subscription_user_id", user.id);
+      fdata.append("user_type", user.user_type);
+
+      fdata.append("sub_user_add_status", !location.state.subscription_pay);
+
+      if (!location.state.subscription_pay) {
+        var sub_user_data = location.state.sub_user_data;
+        sub_user_data.user_type = "5";
+        fdata.append("sub_user_data", JSON.stringify(sub_user_data));
+      }
+
+      fdata.append("email", user.email);
+
+      var response = await UserService.postPayment(fdata);
+      if (response.data.success) {
+        setLoader(false);
+        toast.success(response.data.message)
+        navigate(`/profile`)
+      } else {
+        setLoader(false);
+        toast.error(response.data.message)
+      }
     }
-    
-    fdata.append("email",user.email);
-   
-    var response = await UserService.postPayment(fdata);
-    if (response.data.success) {
-      setLoader(false);
-      toast.success(response.data.message)
-      navigate(`/profile`)
-  } else {
-      setLoader(false);
-      toast.error(response.data.message)
-  }
-}
 
- 
+
   };
 
-     useEffect(() => {
-        
-        if(location.state==null || location.state.subscription_pay==undefined){
-          navigate("/")
-          }
-        }, []);
+  useEffect(() => {
+
+    if (location.state == null || location.state.subscription_pay == undefined) {
+      navigate("/")
+    }
+  }, []);
 
 
   return (
     <div className="container">
-         <div className="payment card-details">
-      <form onSubmit={handleSubmit}>
-        <div className="row">
-      <div className="col-md-12">
-      <label>
-      Card details:
-     
-    </label>
+      <div className="payment card-details">
+        <form onSubmit={handleSubmit}>
+          <div className="row">
+            <div className="col-md-12">
+              <label>
+                Card details:
 
-    <div className="card-field"> <CardElement /></div>
+              </label>
+
+              <div className="card-field">
+                {/* <CardElement /> */}
+
+                <label>
+                  Card number
+                  <CardNumberElement className='stripCardNumber' />
+                </label>
+
+                <label>
+                  Expiry date
+                  <CardExpiryElement className='stripCardExpire' />
+                </label>
+
+                <label>
+                  CVC
+                  <CardCvcElement  className='stripCardCvc'/>
+                </label>
+
+              </div>
+            </div>
+            <div className="col-md-12">
+              <button type="submit" disabled={!stripe}>Pay</button>
+            </div>
+          </div>
+
+
+
+
+
+        </form>
       </div>
-      <div className="col-md-12">
-   <button type="submit" disabled={!stripe}>Pay</button>
-   </div>
-    </div>
-
-
-      
-  
-  
-  </form>
-  </div>
     </div>
   );
 };
