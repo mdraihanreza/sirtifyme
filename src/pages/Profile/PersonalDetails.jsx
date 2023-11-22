@@ -1398,7 +1398,7 @@ function PersonalDetails() {
                 <div className="container">
                     {user.user_type == 4 || user.user_type == 5 || user.user_type == 6 ? (
                         <>
-                            {SubcriptionAlert && <span className="profile-alert">{SubcriptionAlert} <button onClick={e => navigate('/payment', { state: { subscription_pay: true } })}>Pay Now</button></span>}
+                            {SubcriptionAlert && <span className="profile-alert">{SubcriptionAlert} <button onClick={e => navigate('/payment-plan', { state: { subscription_pay: true } })}>Pay Now</button></span>}
                         </>
                     ) : ''}
                     {/* =================== Profile Start================================ */}

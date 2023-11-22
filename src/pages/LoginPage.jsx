@@ -59,10 +59,10 @@ function Login() {
                const res= await UserService.getPaymentDetails(token);
 
             if(res.data.success==false){
-                return navigate('/payment',{state:{subscription_pay:true}});
+                return navigate('/payment-plan',{state:{subscription_pay:true}});
             }
             else if(res.data.data.subscription_status=="0"){
-               return navigate('/payment',{state:{subscription_pay:true}});
+               return navigate('/payment-plan',{state:{subscription_pay:true}});
              }
              navigate(`/profile`)
             }

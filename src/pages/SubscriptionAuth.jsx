@@ -30,7 +30,7 @@ checkSub((data)=>{
     if(data.status){
         // alert(1)
         // <Navigate to="/payment" state={{ path: location.pathname }} />;
-        navigate('/payment',{state:{ path: location.pathname,subscription_pay:true }});
+        navigate('/payment-plan',{state:{ path: location.pathname,subscription_pay:true }});
     }
 })
 
