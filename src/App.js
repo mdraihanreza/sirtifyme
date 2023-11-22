@@ -65,7 +65,7 @@ import AllConnection from './pages/AllConnection';
 import Payment from './pages/Payment.jsx';
 import PaymentHistory from './admin/Components/CMS/Payment History.jsx';
 import Payment2 from './pages/Payment2.jsx';
-import SubscriptionPackage from './pages/SubscriptionPackage.jsx';
+import PaymentPlan from './pages/PaymentPlan.jsx';
 
 // import Demo  from '../src/pages/Demo';
 
@@ -112,7 +112,7 @@ function App() {
                 <Route path='/contact' element={<Contact />} />
                 <Route path='/testimonial' element={<Testimonal />} />
                 <Route path='/payment' element={<LoginAuth><Payment /></LoginAuth>} />
-                <Route path='/payment-plan' element={<LoginAuth><SubscriptionPackage /></LoginAuth>} />
+                <Route path='/payment-plan' element={<LoginAuth><PaymentPlan /></LoginAuth>} />
                 
                 {/* <Route path='/payment2' element={<LoginAuth><Payment2 /></LoginAuth>} /> */}
                 <Route path='/notification' element={<LoginAuth><NotificationPage /></LoginAuth>} />
