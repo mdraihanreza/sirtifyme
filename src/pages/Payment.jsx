@@ -75,7 +75,7 @@ const CheckoutForm = () => {
 
   useEffect(() => {
 
-    if (location.state == null || location.state.subscription_pay == undefined) {
+    if (location.state == null || location.state.subscription_pay == undefined || location.state.subscription_pay == null) {
       navigate("/")
     }
   }, []);
