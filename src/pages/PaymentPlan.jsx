@@ -52,7 +52,7 @@ const PaymentPlan = () => {
 
             <br />
 
-            <button type='button' className='btn btn-primary' onClick={navigate('/payment', { state: { subscription_pay: location.state?.subscription_pay } })}>Proceed</button>
+            <button type='button' className='btn btn-primary' onClick={e=>navigate('/payment', { state: { subscription_pay: location.state?.subscription_pay } })}>Proceed</button>
 
         </>
     );
