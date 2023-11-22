@@ -30,6 +30,9 @@ const PaymentPlan = () => {
                             $399
                         </label>
                     </div>
+
+                    <br />
+                    <button type='button' className='btn btn-primary' onClick={e => navigate('/payment', { state: { subscription_pay: location.state?.subscription_pay } })}>Proceed</button>
                 </div>
 
             </>}
@@ -46,13 +49,17 @@ const PaymentPlan = () => {
                             $50
                         </label>
                     </div>
+
+                    <br />
+
+                    <button type='button' className='btn btn-primary' onClick={e => navigate('/payment', { state: { subscription_pay: location.state?.subscription_pay, sub_user_data: location.state?.sub_user_data } })}>Proceed</button>
                 </div>
 
             </>}
 
             <br />
 
-            <button type='button' className='btn btn-primary' onClick={e=>navigate('/payment', { state: { subscription_pay: location.state?.subscription_pay } })}>Proceed</button>
+
 
         </>
     );
