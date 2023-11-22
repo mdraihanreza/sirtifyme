@@ -19,7 +19,7 @@ const PaymentPlan = () => {
     return (
         <>
             {/* ======== subscription package  ======== */}
-            {location.state.subscription_pay && <>
+            {location.state?.subscription_pay && <>
 
                 <div>
                     <p>Choose Subscription Package</p>
@@ -35,7 +35,7 @@ const PaymentPlan = () => {
             </>}
 
             {/* ========= adduser pacakage ========= */}
-            {!location.state.subscription_pay && <>
+            {!location.state?.subscription_pay && <>
 
                 <div>
                     <p>Choose Payment Package</p>
@@ -52,7 +52,7 @@ const PaymentPlan = () => {
 
             <br />
 
-            <button type='button' className='btn btn-primary' onClick={navigate('/payment', { state: { subscription_pay: location.state.subscription_pay } })}>Proceed</button>
+            <button type='button' className='btn btn-primary' onClick={navigate('/payment', { state: { subscription_pay: location.state?.subscription_pay } })}>Proceed</button>
 
         </>
     );
