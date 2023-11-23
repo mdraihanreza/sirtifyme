@@ -2376,6 +2376,7 @@ a.forgot-password {
     color: #fff;
     border-radius: 5px;
     margin: 19px 0;
+    border: none;
 }
 
 .payment.card-details button:hover {
