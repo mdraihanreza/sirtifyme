@@ -101,7 +101,7 @@ const CheckoutForm = () => {
                   Card number
                   <CardNumberElement className='stripCardNumber' />
                 </label>
-
+                     <div className="cvv-wrap">
                 <label>
                   Expiry date
                   <CardExpiryElement className='stripCardExpire' />
@@ -111,7 +111,7 @@ const CheckoutForm = () => {
                   CVC
                   <CardCvcElement  className='stripCardCvc'/>
                 </label>
-
+                </div>
               </div>
             </div>
             <div className="col-md-12">
