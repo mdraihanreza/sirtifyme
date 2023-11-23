@@ -2471,7 +2471,8 @@ a.forgot-password {
 }
 .payment.card-details.debit-cart form .StripeElement--empty,
 .payment.card-details.debit-cart form .StripeElement--invalid,
-.payment.card-details.debit-cart form .StripeElement--focus {
+.payment.card-details.debit-cart form .StripeElement--focus, 
+.payment.card-details.debit-cart form .StripeElement--complete{
     border: 1px solid #c4cddc;
     padding: 12px 10px;
     border-radius: 7px;
