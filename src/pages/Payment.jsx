@@ -83,7 +83,7 @@ const CheckoutForm = () => {
 
   return (
     <div className="container">
-      <div className="payment card-details">
+      <div className="payment card-details debit-cart">
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-md-12">

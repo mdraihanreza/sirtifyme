@@ -2436,7 +2436,18 @@ a.forgot-password {
     background-color: #09518c;
     border-color: #09518c;
 }
+
+
+/* debit-cart */
+.payment.card-details.debit-cart form{
+    width: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 /* =======23-11-2023======End */
+
 
 @media only screen and (max-width:991px) {
     .payment.card-details {
