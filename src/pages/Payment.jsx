@@ -10,6 +10,7 @@ import { userContext } from '../store';
 import { useNavigate } from "react-router-dom";
 import { Link, useLocation } from 'react-router-dom';
 import UserService from "../services/user.service";
+import debit from '../assets/images/debit-cart-bg.png';
 // Replace 'your-publishable-key' with your actual Stripe publishable key
 const stripePromise = loadStripe('pk_test_51O9uKdHf7NHBBEzBrpgXeOPuoSXRSRLE0jJ3O8QJrofz31X7xZLrgbDrRANJO07jZAs0PIW8b9YIyUuaiXmdaKSO00KYRvezjj');
 
@@ -83,7 +84,7 @@ const CheckoutForm = () => {
 
   return (
     <div className="container">
-      <div className="payment card-details">
+      <div className="payment card-details debit-cart">
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-md-12">
@@ -92,14 +93,14 @@ const CheckoutForm = () => {
 
               </label>
 
-              <div className="card-field">
+              <div className="card-fiel">
                 {/* <CardElement /> */}
 
                 <label>
                   Card number
                   <CardNumberElement className='stripCardNumber' />
                 </label>
-
+                     <div className="cvv-wrap">
                 <label>
                   Expiry date
                   <CardExpiryElement className='stripCardExpire' />
@@ -109,18 +110,13 @@ const CheckoutForm = () => {
                   CVC
                   <CardCvcElement  className='stripCardCvc'/>
                 </label>
-
+                </div>
               </div>
             </div>
             <div className="col-md-12">
               <button type="submit" disabled={!stripe}>Pay</button>
             </div>
           </div>
-
-
-
-
-
         </form>
       </div>
     </div>

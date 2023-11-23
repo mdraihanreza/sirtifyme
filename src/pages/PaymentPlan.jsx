@@ -21,8 +21,13 @@ const PaymentPlan = () => {
             {/* ======== subscription package  ======== */}
             {location.state?.subscription_pay && <>
 
+<<<<<<< HEAD
                 <div>
                     <p>Subscription Plan Per Month</p>
+=======
+                <div class="payment-plan-wrap">
+                    <p>Choose Subscription Package</p>
+>>>>>>> c22892c3298a8f68e34707bca8e9202038f60ad1
 
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="subscription1" checked />
