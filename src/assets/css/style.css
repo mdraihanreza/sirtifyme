@@ -2430,6 +2430,10 @@ a.forgot-password {
     margin: 0;
     margin-bottom: 20px;
 }
+.payment-plan-wrap button.btn.btn-primary {
+    background-color: #09518c;
+    border-color: #09518c;
+}
 /* =======23-11-2023======End */
 
 @media only screen and (max-width:991px) {
