@@ -2474,5 +2474,10 @@ a.forgot-password {
         width: 100%;
     }
 }
+@media only screen and (max-width:568px) {
+    .payment-plan-wrap p{
+        font-size: 18px;
+    }
+}
 
 /* 16-11-23 */
