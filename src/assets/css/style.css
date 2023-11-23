@@ -2408,14 +2408,14 @@ a.forgot-password {
 /* =======17-11-2023======End */
 /* =======23-11-2023======Start */
 .payment-plan-wrap {
-    display: table;
-    margin: auto;
-    text-align: center;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,.1);
-    padding: 70px 140px;
-    margin-top: 70px;
+    display: table;
+    margin: 70px auto auto;
+    padding: 80px 40px;
+    text-align: center;
+    max-width: 643px;
 }
 
 .payment-plan-wrap .form-check {
