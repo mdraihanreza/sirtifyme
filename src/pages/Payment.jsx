@@ -114,11 +114,17 @@ const CheckoutForm = () => {
                     options={{
                       style: {
                         base: {
-                          color: "#008000",
+                          color: "#666f7d",
                           letterSpacing: "0.025em",
                           fontFamily: "poppins,sans-serif",
+                          border: "1px solid #c4cddc",
+                          borderRadius: "7px",
+                          padding: "6px 10px",
+                          fontSize: "14px",
+                          
+                          
                           "::placeholder": {
-                            color: "#aab7c4",
+                            color: "#666f7d",
                           },
                         },
                         invalid: {
