@@ -2470,7 +2470,7 @@ a.forgot-password {
 }
 .payment.card-details.debit-cart form .stripCardNumber.StripeElement.StripeElement--empty {
     border: 1px solid red;
-    padding: 10px;
+    padding: 11px;
 }
 
 /* =======23-11-2023======End */
