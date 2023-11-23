@@ -86,7 +86,6 @@ const CheckoutForm = () => {
     <div className="container">
       <div className="payment card-details debit-cart">
         <form onSubmit={handleSubmit}>
-        <img src={debit} alt="debit-cart" className="debit-cart-bg" />
           <div className="row">
             <div className="col-md-12">
               <label>
