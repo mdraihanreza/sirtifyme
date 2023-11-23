@@ -2419,6 +2419,17 @@ a.forgot-password {
     justify-content: center;
 }
 
+.payment-plan-wrap p {
+    color: #666f7d;
+    font-family: poppins,sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 24px;
+    margin: 0;
+    margin-bottom: 20px;
+}
 /* =======23-11-2023======End */
 
 @media only screen and (max-width:991px) {
