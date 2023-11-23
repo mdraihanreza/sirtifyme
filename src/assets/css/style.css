@@ -2453,6 +2453,13 @@ a.forgot-password {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.payment.card-details.debit-cart form .card-fiel label {
+    color: #2a2a2c;
+    font-family: poppins,sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
 /* =======23-11-2023======End */
 
 
