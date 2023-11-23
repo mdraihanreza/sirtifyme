@@ -118,11 +118,6 @@ const CheckoutForm = () => {
               <button type="submit" disabled={!stripe}>Pay</button>
             </div>
           </div>
-
-
-
-
-
         </form>
       </div>
     </div>
