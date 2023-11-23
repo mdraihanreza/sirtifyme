@@ -2468,9 +2468,11 @@ a.forgot-password {
     font-weight: 600;
     margin-bottom: 18px;
 }
-.payment.card-details.debit-cart form .stripCardNumber.StripeElement.StripeElement--empty {
-    border: 1px solid red;
-    padding: 11px;
+.payment.card-details.debit-cart form .StripeElement--empty {
+    border: 1px solid #c4cddc;
+    padding: 12px 10px;
+    border-radius: 7px;
+    margin-top: 5px;
 }
 
 /* =======23-11-2023======End */
