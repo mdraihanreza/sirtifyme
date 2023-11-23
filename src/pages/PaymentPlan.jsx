@@ -22,7 +22,7 @@ const PaymentPlan = () => {
             {location.state?.subscription_pay && <>
 
                 <div>
-                    <p>Choose Subscription Package</p>
+                    <p>Subscription Plan Per Month</p>
 
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="subscription1" checked />
@@ -41,7 +41,7 @@ const PaymentPlan = () => {
             {!location.state?.subscription_pay && <>
 
                 <div>
-                    <p>Choose Payment Package</p>
+                    <p>To Add Extra User Need To Pay $50 Additional Per Month</p>
 
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="adduserPackage1" checked />
