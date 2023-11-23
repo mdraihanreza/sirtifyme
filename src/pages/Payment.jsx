@@ -116,13 +116,11 @@ const CheckoutForm = () => {
                         base: {
                           color: "#666f7d",
                           letterSpacing: "0.025em",
-                          fontFamily: "poppins,sans-serif",
+                          fontFamily: "poppins, sans-serif",
                           border: "1px solid #c4cddc",
                           borderRadius: "7px",
                           padding: "6px 10px",
                           fontSize: "14px",
-                          
-                          
                           "::placeholder": {
                             color: "#666f7d",
                           },
