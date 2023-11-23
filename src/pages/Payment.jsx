@@ -154,6 +154,7 @@ const CheckoutForm = () => {
           </div>
         </form>
       </div>
+      {loader && <Loader />}
     </div>
   );
 };
