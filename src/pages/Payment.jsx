@@ -92,7 +92,7 @@ const CheckoutForm = () => {
 
               </label>
 
-              <div className="card-field">
+              <div className="card-fiel">
                 {/* <CardElement /> */}
 
                 <label>
