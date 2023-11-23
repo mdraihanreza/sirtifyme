@@ -2460,6 +2460,14 @@ a.forgot-password {
     font-weight: 600;
     margin-bottom: 8px;
 }
+.payment.card-details.debit-cart form label.h-text {
+    text-align: center;
+    color: #2a2a2c;
+    font-family: poppins,sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
 /* =======23-11-2023======End */
 
 
