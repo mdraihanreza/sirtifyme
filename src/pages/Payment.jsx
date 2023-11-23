@@ -23,6 +23,7 @@ const CheckoutForm = () => {
   const location = useLocation();
   // console.log(location.state.subscription_pay,'location.state.subscription_pay')
   const handleSubmit = async (event) => {
+    setLoader(true);
     event.preventDefault();
     var fdata = new FormData();
     if (!stripe || !elements) {
