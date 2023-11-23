@@ -103,7 +103,7 @@ const CheckoutForm = () => {
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-md-12">
-              <label className="h-text">Card details</label>
+              <label className="h-text">Card Details</label>
 
               <div className="card-fiel">
                 {/* <CardElement /> */}

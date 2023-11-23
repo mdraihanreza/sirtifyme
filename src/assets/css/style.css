@@ -2469,7 +2469,9 @@ a.forgot-password {
     font-weight: 600;
     margin-bottom: 18px;
 }
-.payment.card-details.debit-cart form .StripeElement--empty {
+.payment.card-details.debit-cart form .StripeElement--empty,
+.payment.card-details.debit-cart form .StripeElement--invalid,
+.payment.card-details.debit-cart form .StripeElement--focus {
     border: 1px solid #c4cddc;
     padding: 12px 10px;
     border-radius: 7px;
