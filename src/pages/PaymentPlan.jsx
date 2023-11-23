@@ -40,7 +40,7 @@ const PaymentPlan = () => {
             {/* ========= adduser pacakage ========= */}
             {!location.state?.subscription_pay && <>
 
-                <div>
+                <div class="payment-plan-wrap">
                     <p>To Add Extra User Need To Pay $50 Additional Per Month</p>
 
                     <div class="form-check">
