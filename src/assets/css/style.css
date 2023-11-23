@@ -2468,6 +2468,9 @@ a.forgot-password {
     font-size: 16px;
     font-weight: 500;
 }
+.payment.card-details.debit-cart form input::placeholder{
+    color: #fff;
+}
 /* =======23-11-2023======End */
 
 
