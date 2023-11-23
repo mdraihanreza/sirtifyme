@@ -21,7 +21,7 @@ const PaymentPlan = () => {
             {/* ======== subscription package  ======== */}
             {location.state?.subscription_pay && <>
 
-                <div className="payment-plan-wrap">
+                <div class="payment-plan-wrap">
                     <p>Choose Subscription Package</p>
 
                     <div class="form-check">
