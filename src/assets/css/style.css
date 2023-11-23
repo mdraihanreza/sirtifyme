@@ -2417,11 +2417,13 @@ a.forgot-password {
 .payment-plan-wrap .form-check {
     display: flex;
     justify-content: center;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .payment-plan-wrap p {
     color: #666f7d;
-    font-family: poppins,sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
