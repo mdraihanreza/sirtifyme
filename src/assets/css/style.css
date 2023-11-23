@@ -2407,9 +2407,6 @@ a.forgot-password {
 
 /* =======17-11-2023======End */
 /* =======23-11-2023======Start */
-.payment-plan-wrap{
-    display: none;
-}
 .payment-plan-wrap {
     padding: 15px 0;
     margin: auto;
