@@ -1,9 +1,11 @@
 import React from 'react'
 import { Container, Row, Col, Form, Button, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import logo from '../assets/images/logo.svg';
 
 function Footer() {
+  var navigate = useNavigate();
   return (
     <>
 
