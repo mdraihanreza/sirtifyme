@@ -29,6 +29,9 @@ function Footer() {
               <li>
                 <Link to="/privacypolicy" className="pp" >Privacy Policy</Link>
               </li>
+              <li>
+                <Link to="/" className="pp" >Payment</Link>
+              </li>
             </ul>
             {/* <ul className='bottom-links'>
             <li>
