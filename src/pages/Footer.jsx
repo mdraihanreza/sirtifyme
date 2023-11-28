@@ -6,11 +6,13 @@ import { useNavigate } from 'react-router-dom';
 import logo from '../assets/images/logo.svg';
 import UserService from '../services/user.service';
 import TokenHelper from './TokenHelper';
+import { userContext } from '../store';
 import moment from 'moment';
 
 function Footer() {
   var navigate = useNavigate();
   const [SubcriptionAlert, setSubcriptionAlert] = useState("");
+  const { user, dispatch } = useContext(userContext);
   var getSubscriptionData = async () => {
     var token = TokenHelper.getToken();
     if (token !== null) {
