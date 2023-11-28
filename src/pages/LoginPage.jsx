@@ -51,23 +51,23 @@ function Login() {
             dispatch({ type: "user_type", value: response.data.data.user_type });
             dispatch({ type: "sub_user_type", value: response.data.data.sub_user_type });
 
-            if(data.user_type=='1'|| data.user_type=='2' || data.user_type=='3'){
-                navigate(`/profile`)
-            }
-            if(data.user_type=='4'|| data.user_type=='5' || data.user_type=='6'){
-                const token = TokenHelper.getToken();
-               const res= await UserService.getPaymentDetails(token);
+            // if(data.user_type=='1'|| data.user_type=='2' || data.user_type=='3'){
+            //     navigate(`/profile`)
+            // }
+            // if(data.user_type=='4'|| data.user_type=='5' || data.user_type=='6'){
+            //     const token = TokenHelper.getToken();
+            //    const res= await UserService.getPaymentDetails(token);
 
-            if(res.data.success==false){
-                return navigate('/payment-plan',{state:{subscription_pay:true}});
-            }
-            else if(res.data.data.subscription_status=="0"){
-               return navigate('/payment-plan',{state:{subscription_pay:true}});
-             }
-             navigate(`/profile`)
-            }
+            // if(res.data.success==false){
+            //     return navigate('/payment-plan',{state:{subscription_pay:true}});
+            // }
+            // else if(res.data.data.subscription_status=="0"){
+            //    return navigate('/payment-plan',{state:{subscription_pay:true}});
+            //  }
+            //  navigate(`/profile`)
+            // }
             
-           
+            navigate(`/profile`)
             
             toast.success(response.data.message)
 
