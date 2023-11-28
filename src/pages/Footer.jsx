@@ -1,7 +1,8 @@
 
 import { Container, Row, Col, Form, Button, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/images/logo.svg';
 import UserService from '../services/user.service';
