@@ -30,7 +30,7 @@ function Footer() {
                 <Link to="/privacypolicy" className="pp" >Privacy Policy</Link>
               </li>
               <li>
-                <Link to="/" className="pp" >Payment</Link>
+                <Link onClick={e => navigate('/payment-plan', { state: { subscription_pay: true } })} className="pp" >Payment</Link>
               </li>
             </ul>
             {/* <ul className='bottom-links'>
