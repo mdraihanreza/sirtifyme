@@ -2376,6 +2376,7 @@ a.forgot-password {
     color: #fff;
     border-radius: 5px;
     margin: 19px 0;
+    border: 1px solid #09518c;
 }
 
 .payment.card-details button:hover {
@@ -2433,8 +2434,9 @@ a.forgot-password {
 
 .payment-plan-wrap p {
     color: #2a2a2c;
+    line-height: 32px;
     font-family: poppins,sans-serif;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 600;
     margin-bottom: 18px;
 }
@@ -2468,7 +2470,10 @@ a.forgot-password {
     font-weight: 600;
     margin-bottom: 18px;
 }
-.payment.card-details.debit-cart form .StripeElement--empty {
+.payment.card-details.debit-cart form .StripeElement--empty,
+.payment.card-details.debit-cart form .StripeElement--invalid,
+.payment.card-details.debit-cart form .StripeElement--focus, 
+.payment.card-details.debit-cart form .StripeElement--complete{
     border: 1px solid #c4cddc;
     padding: 12px 10px;
     border-radius: 7px;
