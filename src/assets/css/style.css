@@ -2400,9 +2400,9 @@ a.forgot-password {
 .profile-alert button {
     background-color: #09518c;
     border: navajowhite;
-    padding: 3px 10px;
+    padding: 0px 8px;
     color: #fff;
-    font-size: 14px;
+    font-size: 12px;
     border-radius: 8px;
 }
 
