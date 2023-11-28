@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/images/logo.svg';
 import UserService from '../services/user.service';
-import TokenHelper from '../TokenHelper';
+import TokenHelper from './TokenHelper';
 import moment from 'moment';
 
 function Footer() {
