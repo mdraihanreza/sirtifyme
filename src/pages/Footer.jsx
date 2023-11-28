@@ -32,13 +32,13 @@ function Footer() {
                 <Link to="/privacypolicy" className="pp" >Privacy Policy</Link>
               </li>
               <li>
-                <Link
+                {/* <Link
                   to={{
                     pathname: '/payment-plan',
                     state: { subscription_pay: true }
                   }} className="pp" 
-                >Payment</Link>
-                <Link to="/payment-plan" state={{subscription_pay:true}} />
+                >Payment</Link> */}
+                <Link to="/payment-plan" state={{subscription_pay:true}} >Payment</Link>
                   {/* <Link onClick={e => navigate('/payment-plan', { state: { subscription_pay: true } })} className="pp" >Payment</Link> */}
                   {/* <Link onClick={(e) => { console.log('Link clicked'); navigate('/payment-plan', { state: { subscription_pay: true } }); }} className="pp">Payment</Link> */}
               </li>
